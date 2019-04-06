@@ -14,6 +14,9 @@ class City {
 
     init() {
         this.army_.init();
+        this.army_.armyEvent_.on('aging', () => this.GetOlder());
+        this.army_.armyEvent_.on('buy' , nb => this.BuySoliders(nb));
+        this.army_.armyEvent_.on('breakfast' , nb => this.ArmyEats(nb));
         this.divinity_.init();
         this.divinity_.worldEvents.on('favor', shit => this.getShit(shit));
         this.divinity_.worldEvents.on('blessing', shit => this.getShit(shit));
@@ -33,6 +36,30 @@ class City {
 
     showShit() {
         console.log(`${this.name_}: C ${this.corn_}, G ${this.gold_}`);
+
+    }
+
+    get name()
+    {
+        return this.name_;
+    }
+    get gold()
+    {
+        return this.gold_;
+    }
+    get corn()
+    {
+        return this.corn_;
+    }
+
+    set gold(gold)
+    {
+        this.gold_ = gold;
+    }
+
+    set corn(corn)
+    {
+        this.corn_ = corn;
     }
 }
 
