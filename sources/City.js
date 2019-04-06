@@ -20,6 +20,8 @@ class City {
         this.divinity_.init();
         this.divinity_.worldEvents.on('favor', shit => this.getShit(shit));
         this.divinity_.worldEvents.on('blessing', shit => this.getShit(shit));
+        this.divinity_.worldEvents.on('favor',() => this.showShit());
+        this.divinity_.worldEvents.on('retribution', () => console.log("reti"), shit => this.getShit(shit));
     }
 
     getShit(s) {
