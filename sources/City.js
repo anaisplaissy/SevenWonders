@@ -1,4 +1,6 @@
 const {Divinity} = require('./divinity');
+const {Army} = require('./Army')
+const EventEmitter = require('events');
 
 class City {
     constructor(name, divinityName) {
@@ -6,10 +8,12 @@ class City {
         this.divinity_ = new Divinity(divinityName);
         this.corn_ = 1000;
         this.gold_ = 1000;
+        this.army_ = new Army();
         this.init();
     }
 
     init() {
+        this.army_.init();
         this.divinity_.init();
         this.divinity_.worldEvents.on('favor', shit => this.getShit(shit));
         this.divinity_.worldEvents.on('blessing', shit => this.getShit(shit));

@@ -44,4 +44,35 @@ class Army {
 
     }
 
+    get age()
+    {
+        return this.age_;
+    }
+
+
+    get solidersNb()
+    {
+        return this.solidersNb_;
+    }
+
+    GetOlder(age)
+    {
+        age= this.age + 1;
+
+        if(age > 70)
+        {
+            console.log('Soliders of this army are too old, they stop being an army')
+            this.solidersNb_ = 0;
+        }
+
+    }
+
+    IncreaseSolidersNb(amount)
+    {
+        this.solidersNb_ += amount;
+        console.log(this.solidersNb_);
+    }
+
 }
+
+module.exports = {Army};
