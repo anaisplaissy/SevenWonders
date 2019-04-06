@@ -1,4 +1,6 @@
+const EventEmitter = require('events');
 const {Divinity} = require('./divinity');
+const {Army} = require('./Army')
 
 class City {
     constructor(name, divinityName) {
@@ -6,7 +8,8 @@ class City {
         this.divinity_ = new Divinity(divinityName);
         this.corn_ = 1000;
         this.gold_ = 1000;
-        this.nbTrader = 2;
+        this.nbTrader_ = 2;
+        //this.army = new Army(City.this.name);
         this.init();
     }
 
@@ -14,6 +17,8 @@ class City {
         this.divinity_.init();
         this.divinity_.worldEvents.on('favor', shit => this.getShit(shit));
         this.divinity_.worldEvents.on('blessing', shit => this.getShit(shit));
+        this.divinity_.worldEvents.on('favor',() => this.showShit());
+        this.divinity_.worldEvents.on('retribution', () => console.log("reti"), shit => this.getShit(shit));
     }
 
     getShit(s) {
@@ -28,11 +33,44 @@ class City {
         this.gold_ = 0;
     }
 
+
     showShit() {
         console.log(`${this.name_}: C ${this.corn_}, G ${this.gold_}`);
     }
 
-    get
+    get gold()
+    {
+        return this.gold_;
+    }
+    get corn()
+    {
+        return this.corn_;
+    }
+
+    get nbTrader()
+    {
+        return this.nbTrader_;
+    }
+
+    get name()
+    {
+        return this.name_;
+    }
+
+    set gold(gold)
+    {
+        this.gold_ = gold;
+    }
+
+    set corn(corn)
+    {
+        this.corn_ = corn;
+    }
+
+    set nbTrader(trader)
+    {
+        this.nbTrader_= trader;
+    }
 }
 
 module.exports = {City};

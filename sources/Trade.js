@@ -57,7 +57,7 @@ class Trade {
             cite[index_cite_0].corn = cite[index_cite_0].corn + cornQuantity;
             cite[index_cite_1].corn = cite[1].corn - cornQuantity;
 
-            cite[index_cite_1].gold = cite[index_cite_0].gold+cornPrice;
+            cite[index_cite_1].gold = cite[index_cite_1].gold+cornPrice;
             cite[index_cite_0].gold = cite[0].gold - cornPrice;
 
             console.log(cite[index_cite_0].name+" posseses " + cite[index_cite_0].corn+" Corns and "+cite[index_cite_0].gold + " Golds");

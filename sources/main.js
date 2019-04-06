@@ -1,76 +1,16 @@
-const EventEmitter = require('events');
-const {Divinity} = require('./divinity');
-const {Army} = require('./Army')
+const city = require("./city");
+const trade = require("./Trade");
 
-class City {
-    constructor(name, divinityName) {
-        this.name_ = name || 'UNKCITY';
-        this.divinity_ = new Divinity(divinityName);
-        this.corn_ = 1000;
-        this.gold_ = 1000;
-        this.nbTrader_ = 2;
-        //this.army = new Army(City.this.name);
-        this.init();
-    }
+cite1 = new city.City("paris","macron");
+cite2 = new city.City("lyon","ok");
 
-    init() {
-        this.divinity_.init();
-        this.divinity_.worldEvents.on('favor', shit => this.getShit(shit));
-        this.divinity_.worldEvents.on('blessing', shit => this.getShit(shit));
-        this.divinity_.worldEvents.on('favor',() => this.showShit());
-        this.divinity_.worldEvents.on('retribution', () => console.log("reti"), shit => this.getShit(shit));
-    }
+cite1.giveShit();
+cite2.giveShit();
 
-    getShit(s) {
-        this.corn_ += Math.floor(s.corn);
-        this.gold_ += Math.floor(s.gold);
-    }
-
-    giveShit() {
-        this.divinity_.offeringCorn(this.corn_);
-        this.divinity_.offeringGold(this.gold_);
-        this.corn_ = 0;
-        this.gold_ = 0;
-    }
+echange = new trade.Trade([cite1,cite2]);
+echange.init();
 
 
-    showShit() {
-        console.log(`${this.name_}: C ${this.corn_}, G ${this.gold_}`);
-    }
 
-    get gold()
-    {
-        return this.gold_;
-    }
-    get corn()
-    {
-        return this.corn_;
-    }
 
-    get nbTrader()
-    {
-        return this.nbTrader_;
-    }
 
-    get name()
-    {
-        return this.name_;
-    }
-
-    set gold(gold)
-    {
-        this.gold_ = gold;
-    }
-
-    set corn(corn)
-    {
-        this.corn_ = corn;
-    }
-
-    set nbTrader(trader)
-    {
-        this.nbTrader_= trader;
-    }
-}
-
-module.exports = {City};
