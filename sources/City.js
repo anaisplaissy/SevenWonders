@@ -61,6 +61,55 @@ class City {
     {
         this.corn_ = corn;
     }
+
+    BuySoliders(nb)
+    {
+        let price=nb*10;
+        if(nb !=0)
+        {
+            if( this.corn !=0)
+            {
+                if (this.gold > price) {
+                    this.army_.IncreaseSolidersNb(nb);
+                    console.log(nb + " soliders have been bought in " + this.name);
+                    this.gold -= price;
+                }
+                else
+                {
+                    console.log("Not enough gold to get soliders in " + this.name);
+                }
+            }
+            else
+            {
+                console.log("Not enough crop to feed soliders in "+ this.name);
+            }
+        }
+    }
+
+    ArmyEats(nb)
+    {
+        if(this.army_.solidersNb_ > 0)
+        {
+            this.corn -= nb*3;
+            if(this.corn < 0 )
+            {
+                this.corn = 0;
+                this.army_.solidersNb = 0;
+                console.log('No food , No army')
+            }
+        }
+
+    }
+
+    GetOlder()
+    {
+        if(this.army_.age > 70)
+        {
+            console.log('Soliders of' + this.name + "'s army are too old, they stop being an army");
+        }
+    }
+
+
 }
 
 module.exports = {City};
