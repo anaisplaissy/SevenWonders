@@ -55,6 +55,11 @@ class Army {
         return this.solidersNb_;
     }
 
+    set solidersNb(solidersNb)
+    {
+        this.solidersNb_ = solidersNb;
+    }
+
     GetOlder(age)
     {
         age= this.age + 1;

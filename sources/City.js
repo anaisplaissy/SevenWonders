@@ -96,7 +96,7 @@ class City {
             if(this.corn < 0 )
             {
                 this.corn = 0;
-                this.army_.solidersNb = 0;
+                this.army_.solidersNb(0);
                 console.log('No food , No army')
             }
         }
