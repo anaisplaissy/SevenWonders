@@ -8,12 +8,12 @@ class Trade {
   }
 
   init() {
-    this.gaiaInterval_ = setInterval(() => {
-      if (Math.random() > 0.999) {
-        this.worldTrade_.emit('trade', this.cites);
-      }
-    }, this.timeFactor);
-    this.worldTrade_.on('trade', cites => this.trade(cites));
+      this.gaiaInterval_ = setInterval(() => {
+          if (Math.random() > 0.999 - (0.001*this.cites[0].nbTrader + 0.001*this.cites[1].nbTrader)) {
+              this.worldTrade_.emit('trade', this.cites);
+          }
+      }, this.timeFactor);
+      this.worldTrade_.on('trade', cites => this.trade(cites));
   }
 
   cityChoice(cites) {

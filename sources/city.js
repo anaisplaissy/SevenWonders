@@ -9,7 +9,7 @@ class City {
     this.corn_ = 1000;
     this.gold_ = 1000;
     this.army_ = new Army();
-    this.nbTrader_ = 2;
+    this.nbTrader_ = 5;
     this.init();
   }
 

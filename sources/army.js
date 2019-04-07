@@ -17,7 +17,7 @@ class Army {
         this.armyEvent_.emit('breakfast', nb);
       }
 
-      if (Math.random() > 0.1) {
+      if (Math.random() > 0.99) {
         this.armyEvent_.emit('disease');
       }
 

@@ -53,7 +53,6 @@ class ArmyManager {
               cities[index1].gold * 0.9 +
               ' gold'
           );
-            console.log('\n*********************************************\n ');
           cities[index0].gold = Math.floor(
             cities[index0].gold + cities[index1].gold * 0.9
           );
