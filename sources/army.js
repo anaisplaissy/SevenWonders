@@ -4,20 +4,20 @@ class Army {
   constructor(timeFactor) {
     this.age_ = 20;
     this.soldiersNb_ = 0;
-    this.timeFactor_ = timeFactor || 1000;
+    this.timeFactor_ = timeFactor || 2000;
     this.armyEvent_ = new EventEmitter();
   }
   
   init() {
     this.armyEvent_.setMaxListeners(50);
     this.gaiaInterval_ = setInterval(() => {
-      const nb = Math.floor(Math.random() * 100);
+      let nb = Math.floor(Math.random() * 100);
       {
         this.armyEvent_.emit('aging', this.age);
         this.armyEvent_.emit('breakfast', nb);
       }
 
-      if (Math.random() > 0.98) {
+      if (Math.random() > 0.1) {
         this.armyEvent_.emit('disease');
       }
 
@@ -26,7 +26,9 @@ class Army {
       }
 
       this.armyEvent_.on('disease', () => {
+          console.log('\n*************** SOLDIERS NEWS ***************\n'),
         console.log('Black Plague is upon your army, most of Soldiers died..'),
+              console.log('\n*********************************************\n'),
           (this.soldiersNb_ = Math.floor(this.soldiersNb_ * 0.01));
       });
 
@@ -50,14 +52,15 @@ class Army {
     age = this.age + 1;
 
     if (age > 70) {
-      console.log('Soldiers of this army are too old, they stop being an army');
+        console.log('\n*************** SOLDIERS NEWS ***************\n');
+      console.log('Soldiers of this army are too old, they need retirement');
+        console.log('\n*********************************************\n');
       this.soldiersNb_ = 0;
     }
   }
 
   increaseSoldiersNb(amount) {
     this.soldiersNb_ += amount;
-    console.log(this.soldiersNb_);
   }
 }
 

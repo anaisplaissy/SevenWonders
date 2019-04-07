@@ -3,7 +3,7 @@ const EventEmitter = require('events');
 class ArmyManager {
   constructor(cities, timeFactor) {
     this.cities_ = cities;
-    this.timeFactor_ = timeFactor || 1000;
+    this.timeFactor_ = timeFactor || 2000;
     this.warEvent_ = new EventEmitter();
     this.init();
   }
@@ -32,7 +32,8 @@ class ArmyManager {
       cities[index1].army.soldiersNb > 0
     ) {
       if (Math.random() >= 0.5) {
-        console.log(cities[index0].name + ' attaque ' + cities[index1].name);
+          console.log('\n*************** PLANET ATTACK ***************\n ');
+        console.log(cities[index0].name + ' attack ' + cities[index1].name);
         if (cities[index0].army.soldiersNb > cities[index1].army.soldiersNb) {
           cities[index0].army.setSoldiersNb =
             cities[index0].army.soldiersNb - cities[index1].army.soldiersNb;
@@ -52,6 +53,7 @@ class ArmyManager {
               cities[index1].gold * 0.9 +
               ' gold'
           );
+            console.log('\n*********************************************\n ');
           cities[index0].gold = Math.floor(
             cities[index0].gold + cities[index1].gold * 0.9
           );
@@ -82,10 +84,12 @@ class ArmyManager {
           );
         } else {
           console.log('Both forces are equal, this end in a bloodshed');
+            console.log('\n*********************************************\n ');
           cities[index0].army.setSoldiersNb = 0;
           cities[index1].army.setSoldiersNb = 0;
         }
       } else {
+          console.log('\n*************** PLANET ATTACK ***************\n ');
         console.log(cities[index1].name + ' attack ' + cities[index0].name);
         if (cities[index1].army.soldiersNb > cities[index0].army.soldiersNb) {
           cities[index1].army.setSoldiersNb =
@@ -98,6 +102,7 @@ class ArmyManager {
                 cities[index0].army.soldiersNb) +
               ' soldiers during this war'
           );
+
           console.log(
             cities[index0].name +
               " lost all it's soldiers and lost " +
@@ -117,6 +122,7 @@ class ArmyManager {
           console.log(
             cities[index1].name + ' won this war against ' + cities[index0].name
           );
+            console.log('\n*********************************************\n ');
         } else if (
           cities[index1].army.soldiersNb < cities[index0].army.soldiersNb
         ) {
@@ -134,8 +140,10 @@ class ArmyManager {
           console.log(
             cities[index0].name + ' won this war against ' + cities[index1].name
           );
+            console.log('\n*********************************************\n ');
         } else {
           console.log('Both forces are equal, this end in a bloodshed');
+            console.log('\n*********************************************\n ');
           cities[index0].army.setSoldiersNb = 0;
           cities[index1].army.setSoldiersNb = 0;
         }
