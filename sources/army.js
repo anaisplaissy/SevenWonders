@@ -25,14 +25,16 @@ class Army {
         this.armyEvent_.emit('buy', nb);
       }
 
-      this.armyEvent_.on('disease', () => {
-        console.log('\n*************** SOLDIERS NEWS ***************\n'),
-          console.log(
-            'Black Plague is upon your army, most of Soldiers died..'
-          ),
-          console.log('\n*********************************************\n'),
-          (this.soldiersNb_ = Math.floor(this.soldiersNb_ * 0.01));
-      });
+      if(this.soldiersNb !== 0) {
+          this.armyEvent_.on('disease', () => {
+              console.log('\n*************** SOLDIERS NEWS ***************\n'),
+                  console.log(
+                      'Black Plague is upon your army, most of Soldiers died..'
+                  ),
+                  console.log('\n*********************************************\n'),
+                  (this.soldiersNb_ = Math.floor(this.soldiersNb_ * 0.01));
+          });
+      }
 
       this.armyEvent_.on('aging', age => this.getOlder(age));
     }, this.timeFactor_);

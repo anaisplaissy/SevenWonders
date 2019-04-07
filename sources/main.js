@@ -11,6 +11,8 @@ cite3 = new city.City('Kashyyyk', '3');
 cite4 = new city.City('Dagobah', '4');
 cite5 = new city.City('Endor', '5');
 
+console.log("\n\n\n----------------- JAVASCRIPT PROJECT BY FABIEN NICOLAS AND ANAÏS -----------------\n\n\n");
+
 armyM = new armyManager.ArmyManager([cite1, cite2, cite3, cite4, cite5]);
 
 cite1.giveShit();
