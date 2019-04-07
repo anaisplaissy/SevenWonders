@@ -34,9 +34,13 @@ class FleetManager {
       if (Math.random() >= 0.5) {
         console.log('\n*************** PLANET ATTACK ***************\n ');
         console.log(planets[index0].name + ' attack ' + planets[index1].name);
-        if (planets[index0].fleet.spaceshipsNb > planets[index1].fleet.spaceshipsNb) {
+        if (
+          planets[index0].fleet.spaceshipsNb >
+          planets[index1].fleet.spaceshipsNb
+        ) {
           planets[index0].fleet.setSpaceshipsNb =
-            planets[index0].fleet.spaceshipsNb - planets[index1].fleet.spaceshipsNb;
+            planets[index0].fleet.spaceshipsNb -
+            planets[index1].fleet.spaceshipsNb;
           planets[index1].fleet.setSpaceshipsNb = 0;
           console.log(
             planets[index0].name +
@@ -62,14 +66,18 @@ class FleetManager {
           );
           planets[index1].fuel = Math.floor(planets[index1].fuel * 0.1);
           console.log(
-            planets[index0].name + ' won this war against ' + planets[index1].name
+            planets[index0].name +
+              ' won this war against ' +
+              planets[index1].name
           );
-            console.log('\n*********************************************\n ');
+          console.log('\n*********************************************\n ');
         } else if (
-          planets[index0].fleet.spaceshipsNb < planets[index1].fleet.spaceshipsNb
+          planets[index0].fleet.spaceshipsNb <
+          planets[index1].fleet.spaceshipsNb
         ) {
           planets[index1].fleet.setSpaceshipsNb =
-            planets[index1].fleet.spaceshipsNb - planets[index0].fleet.spaceshipsNb;
+            planets[index1].fleet.spaceshipsNb -
+            planets[index0].fleet.spaceshipsNb;
           planets[index0].fleet.setSpaceshipsNb = 0;
           console.log(
             planets[index1].name +
@@ -80,9 +88,11 @@ class FleetManager {
           );
           console.log(planets[index0].name + " lost all it's spaceships ");
           console.log(
-            planets[index1].name + ' won this war against ' + planets[index0].name
+            planets[index1].name +
+              ' won this war against ' +
+              planets[index0].name
           );
-            console.log('\n*********************************************\n ');
+          console.log('\n*********************************************\n ');
         } else {
           console.log('Both forces are equal, this end in a bloodshed');
           console.log('\n*********************************************\n ');
@@ -92,9 +102,13 @@ class FleetManager {
       } else {
         console.log('\n*************** PLANET ATTACK ***************\n ');
         console.log(planets[index1].name + ' attack ' + planets[index0].name);
-        if (planets[index1].fleet.spaceshipsNb > planets[index0].fleet.spaceshipsNb) {
+        if (
+          planets[index1].fleet.spaceshipsNb >
+          planets[index0].fleet.spaceshipsNb
+        ) {
           planets[index1].fleet.setSpaceshipsNb =
-            planets[index1].fleet.spaceshipsNb - planets[index0].fleet.spaceshipsNb;
+            planets[index1].fleet.spaceshipsNb -
+            planets[index0].fleet.spaceshipsNb;
           planets[index0].fleet.setSpaceshipsNb = 0;
           console.log(
             planets[index1].name +
@@ -121,14 +135,18 @@ class FleetManager {
           );
           planets[index0].fuel = Math.floor(planets[index0].fuel * 0.1);
           console.log(
-            planets[index1].name + ' won this war against ' + planets[index0].name
+            planets[index1].name +
+              ' won this war against ' +
+              planets[index0].name
           );
           console.log('\n*********************************************\n ');
         } else if (
-          planets[index1].fleet.spaceshipsNb < planets[index0].fleet.spaceshipsNb
+          planets[index1].fleet.spaceshipsNb <
+          planets[index0].fleet.spaceshipsNb
         ) {
           planets[index0].fleet.setSpaceshipsNb =
-            planets[index0].fleet.spaceshipsNb - planets[index1].fleet.spaceshipsNb;
+            planets[index0].fleet.spaceshipsNb -
+            planets[index1].fleet.spaceshipsNb;
           planets[index1].fleet.setSpaceshipsNb = 0;
           console.log(
             planets[index0].name +
@@ -139,7 +157,9 @@ class FleetManager {
           );
           console.log(planets[index1].name + " lost all it's spaceships ");
           console.log(
-            planets[index0].name + ' won this war against ' + planets[index1].name
+            planets[index0].name +
+              ' won this war against ' +
+              planets[index1].name
           );
           console.log('\n*********************************************\n ');
         } else {
@@ -155,10 +175,9 @@ class FleetManager {
   planetChoice(planetsList) {
     const min = 0;
     const max = planetsList.length;
-    let indexPlanet0;
     let indexPlanet1;
 
-    indexPlanet0 = Math.floor(Math.random() * (max - min) + min);
+    const indexPlanet0 = Math.floor(Math.random() * (max - min) + min);
 
     do {
       indexPlanet1 = Math.floor(Math.random() * (max - min) + min);

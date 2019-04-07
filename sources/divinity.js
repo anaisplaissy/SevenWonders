@@ -56,7 +56,9 @@ class Divinity {
       } else {
         reject(
           new Error(
-            `You didn't gave a number of credit to ${this.name}, Earth collapsed`
+            `You didn't gave a number of credit to ${
+              this.name
+            }, Earth collapsed`
           )
         );
       }

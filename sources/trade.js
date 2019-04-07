@@ -8,14 +8,12 @@ class Trade {
   }
 
   init() {
-      this.gaiaInterval_ = setInterval(() => {
-
-          if (Math.random() > 0.999)
-          {
-              this.worldTrade_.emit('trade',this.planets);
-          }
-      }, this.timeFactor);
-      this.worldTrade_.on('trade',planets => this.trade(planets));
+    this.gaiaInterval_ = setInterval(() => {
+      if (Math.random() > 0.999) {
+        this.worldTrade_.emit('trade', this.planets);
+      }
+    }, this.timeFactor);
+    this.worldTrade_.on('trade', planets => this.trade(planets));
   }
 
   planetChoice(planets) {

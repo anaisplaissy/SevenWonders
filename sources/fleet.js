@@ -25,15 +25,15 @@ class Fleet {
         this.fleetEvent_.emit('buy', nb);
       }
 
-      if(this.spaceshipsNb !== 0) {
-          this.fleetEvent_.on('disease', () => {
-              console.log('\n*************** SPACESHIPS NEWS ***************\n'),
-                  console.log(
-                      'Travelling through an asteroid field, most of the fleet perished..'
-                  ),
-                  console.log('\n*********************************************\n'),
-                  (this.spaceshipsNb_ = Math.floor(this.spaceshipsNb_ * 0.01));
-          });
+      if (this.spaceshipsNb !== 0) {
+        this.fleetEvent_.on('disease', () => {
+          console.log('\n*************** SPACESHIPS NEWS ***************\n'),
+            console.log(
+              'Travelling through an asteroid field, most of the fleet perished..'
+            ),
+            console.log('\n*********************************************\n'),
+            (this.spaceshipsNb_ = Math.floor(this.spaceshipsNb_ * 0.01));
+        });
       }
 
       this.fleetEvent_.on('aging', age => this.getOlder(age));
@@ -57,7 +57,9 @@ class Fleet {
 
     if (age > 70) {
       console.log('\n*************** SPACESHIPS NEWS ***************\n');
-      console.log('Spaceships of this fleet are old models, they need retirement');
+      console.log(
+        'Spaceships of this fleet are old models, they need retirement'
+      );
       console.log('\n*********************************************\n');
       this.spaceshipsNb_ = 0;
     }
