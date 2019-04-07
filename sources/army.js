@@ -7,7 +7,7 @@ class Army {
     this.timeFactor_ = timeFactor || 1000;
     this.armyEvent_ = new EventEmitter();
   }
-
+  
   init() {
     this.armyEvent_.setMaxListeners(50);
     this.gaiaInterval_ = setInterval(() => {

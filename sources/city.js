@@ -1,3 +1,4 @@
+
 const {Divinity} = require('./divinity');
 const {Army} = require('./army');
 
@@ -8,6 +9,9 @@ class City {
     this.corn_ = 1000;
     this.gold_ = 1000;
     this.army_ = new Army();
+
+    this.nbTrader_ = 2;
+
     this.init();
   }
 
@@ -19,12 +23,11 @@ class City {
     this.divinity_.init();
     this.divinity_.worldEvents.on('favor', shit => this.getShit(shit));
     this.divinity_.worldEvents.on('blessing', shit => this.getShit(shit));
-    this.divinity_.worldEvents.on('favor', () => this.showShit());
     this.divinity_.worldEvents.on(
       'retribution',
-      () => console.log('reti'),
       shit => this.getShit(shit)
     );
+    
   }
 
   getShit(s) {
@@ -38,11 +41,7 @@ class City {
     this.corn_ = 0;
     this.gold_ = 0;
   }
-
-  showShit() {
-    console.log(`${this.name_}: C ${this.corn_}, G ${this.gold_}`);
-  }
-
+  
   get name() {
     return this.name_;
   }
@@ -55,14 +54,7 @@ class City {
     return this.corn_;
   }
 
-  set gold(gold) {
-    this.gold_ = gold;
-  }
-
-  set corn(corn) {
-    this.corn_ = corn;
-  }
-
+  
   get army() {
     return this.army_;
   }
@@ -103,6 +95,13 @@ class City {
           "'s army are too old, they stop being an army"
       );
     }
+
+  get nbTrader() {
+    return this.nbTrader_;
+  }
+
+  set nbTrader(trader) {
+    this.nbTrader_ = trader;
   }
 }
 
