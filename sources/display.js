@@ -52,7 +52,21 @@ class Display {
         Spaceships: planets[4].fleet.spaceshipsNb_,
           Fuel: planets[4].fuel_,
           Traders: planets[4].nbTrader_
-      }
+      },
+        'Planet 6': {
+            Name: planets[5].name_,
+            Credit: planets[5].credit_,
+            Spaceships: planets[5].fleet.spaceshipsNb_,
+            Fuel: planets[5].fuel_,
+            Traders: planets[5].nbTrader_
+        },
+        'Planet 7': {
+            Name: planets[6].name_,
+            Credit: planets[6].credit_,
+            Spaceships: planets[6].fleet.spaceshipsNb_,
+            Fuel: planets[6].fuel_,
+            Traders: planets[6].nbTrader_
+        }
     };
 
     console.table(tab);

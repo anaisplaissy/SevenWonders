@@ -86,7 +86,7 @@ class Planet {
         this.fuel = 0;
         this.fleet.spaceshipsNb_ = 0;
         console.log('\n*************** SPACESHIPS NEWS ***************\n');
-        console.log('No fuel , No Ships');
+        console.log('No fuel , no ships');
         console.log('\n*********************************************\n');
       }
     }
