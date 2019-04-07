@@ -1,4 +1,4 @@
-# Seven Wonders Sort of
+# Seven Wonders Sort of (Star Wars)
 Javascript Project
 
 ## Requirements
