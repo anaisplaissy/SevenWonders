@@ -1,4 +1,8 @@
 const city = require('./city');
+
+const armyManager = require('./army-manager');
+
+
 const table = require('./display');
 const trade = require('./trade');
 
@@ -7,6 +11,9 @@ cite2 = new city.City('Coruscant', '2');
 cite3 = new city.City('Kashyyyk', '3');
 cite4 = new city.City('Dagobah', '4');
 cite5 = new city.City('Endor', '5');
+
+
+armyM = new armyManager.ArmyManager([cite1,cite2,cite3,cite4,cite5]);
 
 cite1.giveShit();
 cite2.giveShit();
