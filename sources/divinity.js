@@ -1,6 +1,5 @@
 const EventEmitter = require('events');
 
-
 class Divinity {
   constructor(name, timeFactor) {
     this.name_ = name || 'UNKDIVINITY';
@@ -34,13 +33,15 @@ class Divinity {
     return new Promise((resolve, reject) => {
       if (typeof offer === 'number') {
         setTimeout(() => {
-          this.corn_ = (offer >= 0) ? this.corn + offer : 0;
+          this.corn_ = offer >= 0 ? this.corn + offer : 0;
           resolve();
         }, 4 * this.timeFactor * Math.random());
       } else {
-        reject(new Error(
-          `You didn't gave a number of corn to ${this.name}, Earth collapsed`
-        ));
+        reject(
+          new Error(
+            `You didn't gave a number of corn to ${this.name}, Earth collapsed`
+          )
+        );
       }
     });
   }
@@ -49,13 +50,15 @@ class Divinity {
     return new Promise((resolve, reject) => {
       if (typeof offer === 'number') {
         setTimeout(() => {
-          this.gold_ = (offer >= 0) ? this.gold + offer : 0;
+          this.gold_ = offer >= 0 ? this.gold + offer : 0;
           resolve();
         }, 4 * this.timeFactor * Math.random());
       } else {
-        reject(new Error(
-          `You didn't gave a number of gold to ${this.name}, Earth collapsed`
-        ));
+        reject(
+          new Error(
+            `You didn't gave a number of gold to ${this.name}, Earth collapsed`
+          )
+        );
       }
     });
   }
