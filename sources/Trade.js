@@ -19,24 +19,24 @@ class Trade {
   cityChoice(cites) {
     const min = 0;
     const max = cites.length;
-    let index_city_0;
-    let index_city_1;
+    let indexCity0;
+    let indexCity1;
 
-    index_city_0 = Math.floor(Math.random() * (max - min) + min);
+      indexCity0 = Math.floor(Math.random() * (max - min) + min);
 
     do {
-      index_city_1 = Math.floor(Math.random() * (max - min) + min);
-    } while (index_city_1 == index_city_0);
+        indexCity1 = Math.floor(Math.random() * (max - min) + min);
+    } while (indexCity1 == indexCity0);
 
-    return [index_city_0, index_city_1];
+    return [indexCity0, indexCity1];
   }
 
   trade(cite) {
     const cites = this.cityChoice(cite);
-    const index_cite_0 = cites[0];
-    const index_cite_1 = cites[1];
+    const indexCity0 = cites[0];
+    const indexCity1 = cites[1];
 
-    const maxCorn = cite[index_cite_1].gold;
+    const maxCorn = cite[indexCity1].gold;
     const minCorn = 0;
     const cornQuantity = Math.floor(
       Math.random() * (maxCorn - minCorn) + minCorn
@@ -45,66 +45,66 @@ class Trade {
 
     if (
       Math.random() > 0.5 &&
-      cite[index_cite_0].nbTrader > 0 &&
-      cite[index_cite_1].nbTrader > 0 &&
-      cite[index_cite_0].gold > cornPrice &&
-      cite[index_cite_1].corn > 0
+      cite[indexCity0].nbTrader > 0 &&
+      cite[indexCity1].nbTrader > 0 &&
+      cite[indexCity0].gold > cornPrice &&
+      cite[indexCity1].corn > 0
     ) {
       console.log('\n\n***** TRADE TRADE IN PROGRESS ***** : \n\n ');
 
       console.log(
-        cite[index_cite_0].name +
+        cite[indexCity0].name +
           ' posseses ' +
-          cite[index_cite_0].corn +
+          cite[indexCity0].corn +
           ' Corns and ' +
-          cite[index_cite_0].gold +
+          cite[indexCity0].gold +
           ' Golds'
       );
       console.log(
-        cite[index_cite_1].name +
+        cite[indexCity1].name +
           ' posseses ' +
-          cite[index_cite_1].corn +
+          cite[indexCity1].corn +
           ' Corns and ' +
-          cite[index_cite_1].gold +
+          cite[indexCity1].gold +
           ' Golds\n'
       );
 
       console.log(
-        cite[index_cite_0].name +
+        cite[indexCity0].name +
           ' buy corn to ' +
-          cite[index_cite_1].name +
+          cite[indexCity1].name +
           '\n'
       );
 
-      cite[index_cite_0].corn = cite[index_cite_0].corn + cornQuantity;
-      cite[index_cite_1].corn = cite[1].corn - cornQuantity;
+      cite[indexCity0].corn = cite[indexCity0].corn + cornQuantity;
+      cite[indexCity1].corn = cite[indexCity1].corn - cornQuantity;
 
-      cite[index_cite_1].gold = cite[index_cite_1].gold + cornPrice;
-      cite[index_cite_0].gold = cite[0].gold - cornPrice;
+      cite[indexCity1].gold = cite[indexCity1].gold + cornPrice;
+      cite[indexCity0].gold = cite[indexCity0].gold - cornPrice;
 
       console.log(
-        cite[index_cite_0].name +
+        cite[indexCity0].name +
           ' posseses ' +
-          cite[index_cite_0].corn +
+          cite[indexCity0].corn +
           ' Corns and ' +
-          cite[index_cite_0].gold +
+          cite[indexCity0].gold +
           ' Golds'
       );
       console.log(
-        cite[index_cite_1].name +
+        cite[indexCity1].name +
           ' posseses ' +
-          cite[index_cite_1].corn +
+          cite[indexCity1].corn +
           ' Corns and ' +
-          cite[index_cite_1].gold +
+          cite[indexCity1].gold +
           ' Golds\n'
       );
-    } else if (Math.random() > 0.5 && cite[index_cite_0].nbTrader > 0) {
+    } else if (Math.random() > 0.5 && cite[indexCity0].nbTrader > 0) {
       console.log(
         'Warning : There is an attack **** Trader from the city : ' +
-          cite[index_cite_0].name +
+          cite[indexCity0].name +
           'is dead.'
       );
-      cite[index_cite_0].nbTrader -= 1;
+      cite[indexCity0].nbTrader -= 1;
     }
   }
 }
