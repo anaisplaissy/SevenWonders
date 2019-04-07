@@ -1,11 +1,11 @@
 const city = require('./city');
-const trade = require('./Trade');
+const trade = require('./trade');
 
-cite1 = new city.City('paris', 'macron');
-cite2 = new city.City('lyon', 'ok');
+const cite1 = new city.City('paris', 'macron');
+const cite2 = new city.City('lyon', 'ok');
 
 cite1.giveShit();
 cite2.giveShit();
 
-echange = new trade.Trade([cite1, cite2]);
+const echange = new trade.Trade([cite1, cite2]);
 echange.init();

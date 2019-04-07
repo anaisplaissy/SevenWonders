@@ -1,6 +1,6 @@
 const EventEmitter = require('events');
 const {Divinity} = require('./divinity');
-const {Army} = require('./Army');
+const {Army} = require('./army');
 
 class City {
   constructor(name, divinityName) {
