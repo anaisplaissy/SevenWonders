@@ -5,8 +5,6 @@ Javascript Project
 You first need to install [Node.js](https://nodejs.org/en/download/)
 Then you can install Node.js dependencies using :
 * `npm install'
-* yarn add 'chai'
-* yarn add 'chai-as-promised'
 
 ### Goal
 The goal of this project is to implement a simulation of the game seven wonders sort of.
