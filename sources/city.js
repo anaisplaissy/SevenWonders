@@ -1,6 +1,5 @@
 const {Divinity} = require('./divinity');
-const {Army} = require('./Army');
-const EventEmitter = require('events');
+const {Army} = require('./army');
 
 class City {
   constructor(name, divinityName) {
@@ -14,9 +13,9 @@ class City {
 
   init() {
     this.army_.init();
-    this.army_.armyEvent_.on('aging', () => this.GetOlder());
-    this.army_.armyEvent_.on('buy', nb => this.BuySoldiers(nb));
-    this.army_.armyEvent_.on('breakfast', nb => this.ArmyEats(nb));
+    this.army_.armyEvent_.on('aging', () => this.getOlder());
+    this.army_.armyEvent_.on('buy', nb => this.buySoldiers(nb));
+    this.army_.armyEvent_.on('breakfast', nb => this.armyEats(nb));
     this.divinity_.init();
     this.divinity_.worldEvents.on('favor', shit => this.getShit(shit));
     this.divinity_.worldEvents.on('blessing', shit => this.getShit(shit));
@@ -68,12 +67,12 @@ class City {
     return this.army_;
   }
 
-  BuySoldiers(nb) {
+  buySoldiers(nb) {
     const price = nb * 10;
     if (nb !== 0) {
       if (this.corn !== 0) {
         if (this.gold > price) {
-          this.army.IncreaseSoldiersNb(nb);
+          this.army.increaseSoldiersNb(nb);
           console.log(nb + ' soliders have been bought in ' + this.name);
           this.gold -= price;
         } else {
@@ -85,7 +84,7 @@ class City {
     }
   }
 
-  ArmyEats(nb) {
+  armyEats(nb) {
     if (this.army.soldiersNb > 0) {
       this.corn -= nb * 3;
       if (this.corn < 0) {
@@ -96,7 +95,7 @@ class City {
     }
   }
 
-  GetOlder() {
+  getOlder() {
     if (this.army.age > 70) {
       console.log(
         'Soliders of' +

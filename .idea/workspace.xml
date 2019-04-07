@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcbcacea-11da-49f4-8fc2-53cc66d0a3d9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/sources/army-manager.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sources/City.js" beforeDir="false" afterPath="$PROJECT_DIR$/sources/City.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/Army.js" beforeDir="false" afterPath="$PROJECT_DIR$/sources/army.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/ArmyManager.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/City.js" beforeDir="false" afterPath="$PROJECT_DIR$/sources/city.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/Display.js" beforeDir="false" afterPath="$PROJECT_DIR$/sources/display.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/Trade.js" beforeDir="false" afterPath="$PROJECT_DIR$/sources/trade.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/divinity.js" beforeDir="false" afterPath="$PROJECT_DIR$/sources/divinity.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/sources/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/divinity.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/divinity.test.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -15,55 +23,26 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sources/Trade.js">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/sources/army.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-759">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sources/Army.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sources/Display.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sources/main.js">
+        <entry file="file://$PROJECT_DIR$/sources/display.js">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sources/City.js">
+        <entry file="file://$PROJECT_DIR$/sources/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package-lock.json">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="19" lean-forward="true" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/divinity.test.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            <state>
+              <caret column="31" selection-start-column="31" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -71,7 +50,27 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sources/divinity.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1169" />
+            <state relative-caret-position="34">
+              <caret line="5" column="19" lean-forward="true" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sources/city.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1292">
+              <caret line="76" column="18" lean-forward="true" selection-start-line="76" selection-start-column="18" selection-end-line="76" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sources/army-manager.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2533">
+              <caret line="149" column="7" selection-start-line="149" selection-start-column="7" selection-end-line="149" selection-end-column="7" />
+            </state>
           </provider>
         </entry>
       </file>
@@ -84,6 +83,27 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>soliders</find>
+      <find>solidersNb</find>
+      <find>city2</find>
+      <find>city[1]</find>
+      <find>index_city_</find>
+      <find>CityChoice</find>
+      <find>IncreaseSoldiersNb</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>soldiersNb</replace>
+      <replace>Soldiers</replace>
+      <replace>city[0]</replace>
+      <replace>city[1]</replace>
+      <replace>cities[index1]</replace>
+      <replace>indexCity</replace>
+      <replace>cityChoice</replace>
+      <replace>increaseSoldiersNb</replace>
+    </replaceStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -91,20 +111,25 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/sources/Trade.js" />
-        <option value="$PROJECT_DIR$/sources/main.js" />
-        <option value="$PROJECT_DIR$/sources/city.js" />
-        <option value="$PROJECT_DIR$/sources/Army.js" />
         <option value="$PROJECT_DIR$/sources/Display.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/test/divinity.test.js" />
+        <option value="$PROJECT_DIR$/sources/Army.js" />
         <option value="$PROJECT_DIR$/sources/City.js" />
+        <option value="$PROJECT_DIR$/sources/ArmyManager.js" />
+        <option value="$PROJECT_DIR$/sources/armyManager.js" />
+        <option value="$PROJECT_DIR$/sources/city.js" />
+        <option value="$PROJECT_DIR$/sources/army.js" />
+        <option value="$PROJECT_DIR$/sources/army-manager.js" />
+        <option value="$PROJECT_DIR$/sources/main.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="952" />
-    <option name="width" value="977" />
-    <option name="height" value="1038" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1384" />
+    <option name="height" value="737" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -124,11 +149,6 @@
               <item name="SevenWonders" type="462c0819:PsiDirectoryNode" />
               <item name="sources" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="SevenWonders" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SevenWonders" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -139,6 +159,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs.mocha.mocha_node_package_dir" value="$PROJECT_DIR$/node_modules/mocha" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -155,8 +176,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Mocha.test\divinity.test.js">
+  <component name="RunManager" selected="Node.js.main.js">
+    <configuration name="army-manager.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/sources/army-manager.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
     <configuration name="divinity.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/sources/divinity.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration name="main.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/sources/main.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
     <configuration name="test\divinity.test.js" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
@@ -173,6 +200,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.main.js" />
+        <item itemvalue="Node.js.army-manager.js" />
         <item itemvalue="Mocha.test\divinity.test.js" />
         <item itemvalue="Node.js.divinity.js" />
       </list>
@@ -189,6 +218,7 @@
       <option name="presentableId" value="Default" />
       <updated>1554579505430</updated>
       <workItem from="1554579508940" duration="2620000" />
+      <workItem from="1554650135457" duration="8317000" />
     </task>
     <servers />
   </component>
@@ -216,26 +246,35 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2620000" />
+    <option name="totallyTimeSpent" value="13021000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1107" height="589" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24983476" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24953271" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.3243626" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.33144477" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32822758" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33041576" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32822758" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3286119" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3238512" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -245,11 +284,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sources/divinity.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1169" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package-lock.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -267,22 +301,77 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sources/Army.js">
+    <entry file="file://$PROJECT_DIR$/../SevenWondersCopiéCollé/Source/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="31" lean-forward="true" selection-start-column="31" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SevenWondersCopiéCollé/Source/Army.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SevenWondersCopiéCollé/Source/divinity.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-204" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SevenWondersCopiéCollé/Source/City.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="23" column="108" lean-forward="true" selection-start-line="22" selection-start-column="8" selection-end-line="23" selection-end-column="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SevenWondersCopiéCollé/Source/ArmyManager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="61" lean-forward="true" selection-end-line="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/trade.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/sources/Trade.js">
+    <entry file="file://$PROJECT_DIR$/sources/divinity.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="5" column="19" lean-forward="true" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/display.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/sources/Display.js">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/sources/city.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1292">
+          <caret line="76" column="18" lean-forward="true" selection-start-line="76" selection-start-column="18" selection-end-line="76" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/army-manager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2533">
+          <caret line="149" column="7" selection-start-line="149" selection-start-column="7" selection-end-line="149" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/army.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-759">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sources/main.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sources/City.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
+        <state>
+          <caret column="31" selection-start-column="31" selection-end-column="31" />
         </state>
       </provider>
     </entry>

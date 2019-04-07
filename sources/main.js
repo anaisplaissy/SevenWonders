@@ -1,7 +1,5 @@
 const city = require('./city');
-const trade = require('./Trade');
-const army = require('./Army');
-const armyManager = require('./ArmyManager');
+const armyManager = require('./army-manager');
 
 cite1 = new city.City('paris', 'macron');
 cite2 = new city.City('lyon', 'ok');

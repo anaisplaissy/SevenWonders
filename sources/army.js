@@ -9,10 +9,9 @@ class Army {
   }
 
   init() {
-    const nb = Math.floor(Math.random() * 100);
-
     this.armyEvent_.setMaxListeners(50);
     this.gaiaInterval_ = setInterval(() => {
+      const nb = Math.floor(Math.random() * 100);
       {
         this.armyEvent_.emit('aging', this.age);
         this.armyEvent_.emit('breakfast', nb);
@@ -31,7 +30,7 @@ class Army {
           (this.soldiersNb_ = Math.floor(this.soldiersNb_ * 0.01));
       });
 
-      this.armyEvent_.on('aging', age => this.GetOlder(age));
+      this.armyEvent_.on('aging', age => this.getOlder(age));
     }, this.timeFactor_);
   }
 
@@ -43,11 +42,11 @@ class Army {
     return this.soldiersNb_;
   }
 
-  set SetsoldiersNb(soldiersNb) {
+  set setSoldiersNb(soldiersNb) {
     this.soldiersNb_ = soldiersNb;
   }
 
-  GetOlder(age) {
+  getOlder(age) {
     age = this.age + 1;
 
     if (age > 70) {
@@ -56,7 +55,7 @@ class Army {
     }
   }
 
-  IncreaseSoldiersNb(amount) {
+  increaseSoldiersNb(amount) {
     this.soldiersNb_ += amount;
     console.log(this.soldiersNb_);
   }
