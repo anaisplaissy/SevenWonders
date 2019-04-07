@@ -1,28 +1,29 @@
-const city = require('./city');
+const planet = require('./planet');
 
-const armyManager = require('./army-manager');
+const fleetManager = require('./fleet-manager');
 
 const table = require('./display');
 const trade = require('./trade');
 
-cite1 = new city.City('Tatooine', '1');
-cite2 = new city.City('Coruscant', '2');
-cite3 = new city.City('Kashyyyk', '3');
-cite4 = new city.City('Dagobah', '4');
-cite5 = new city.City('Endor', '5');
+planet1 = new planet.Planet('Tatooine', '1');
+planet2 = new planet.Planet('Coruscant', '2');
+planet3 = new planet.Planet('Kashyyyk', '3');
+planet4 = new planet.Planet('Dagobah', '4');
+planet5 = new planet.Planet('Endor', '5');
 
-console.log("\n\n\n----------------- JAVASCRIPT PROJECT BY FABIEN NICOLAS AND ANAÏS -----------------\n\n\n");
+console.log("\n\n\n------------------------------ SEVEN WONDERS ------------------------------");
+console.log("------------ FABIEN LIONTI | NICOLAS NERRIENET | ANAÏS PLAISSY ------------\n\n\n");
 
-armyM = new armyManager.ArmyManager([cite1, cite2, cite3, cite4, cite5]);
+fleetM = new fleetManager.FleetManager([planet1, planet2, planet3, planet4, planet5]);
 
-cite1.giveShit();
-cite2.giveShit();
-cite3.giveShit();
-cite4.giveShit();
-cite5.giveShit();
+planet1.giveShit();
+planet2.giveShit();
+planet3.giveShit();
+planet4.giveShit();
+planet5.giveShit();
 
-echange = new trade.Trade([cite1, cite2, cite3, cite4, cite5]);
+echange = new trade.Trade([planet1, planet2, planet3, planet4, planet5]);
 echange.init();
 
-tab1 = new table.Display([cite1, cite2, cite3, cite4, cite5]);
+tab1 = new table.Display([planet1, planet2, planet3, planet4, planet5]);
 tab1.init();

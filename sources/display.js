@@ -2,56 +2,56 @@ const EventEmitter = require('events');
 const divinity = require('./divinity');
 
 class Display {
-  constructor(cities, timeFactor) {
-    this.cities_ = cities;
+  constructor(planets, timeFactor) {
+    this.planets_ = planets;
     this.timeFactor_ = timeFactor || 2000;
     this.displayEvent_ = new EventEmitter();
   }
 
   init() {
     this.gaiaInterval_ = setInterval(() => {
-      this.displayEvent_.emit('display', this.cities_);
+      this.displayEvent_.emit('display', this.planets_);
     }, this.timeFactor_);
 
-    this.displayEvent_.on('display', cities => this.table(cities));
+    this.displayEvent_.on('display', planets => this.table(planets));
   }
 
-  table(cities) {
+  table(planets) {
     const tab = {
       'Planet 1': {
-        Name: cities[0].name_,
-        Corn: cities[0].corn_,
-        Gold: cities[0].gold_,
-        Traders: cities[0].nbTrader_,
-        Soldiers: cities[0].army.soldiersNb_
+        Name: planets[0].name_,
+        Credit: planets[0].credit_,
+        Spaceships: planets[0].fleet.spaceshipsNb_,
+          Fuel: planets[0].fuel_,
+          Traders: planets[0].nbTrader_
       },
       'Planet 2': {
-        Name: cities[1].name_,
-        Corn: cities[1].corn_,
-        Gold: cities[1].gold_,
-        Traders: cities[1].nbTrader_,
-        Soldiers: cities[1].army.soldiersNb_
+        Name: planets[1].name_,
+        Credit: planets[1].credit_,
+        Spaceships: planets[1].fleet.spaceshipsNb_,
+          Fuel: planets[1].fuel_,
+          Traders: planets[1].nbTrader_
       },
       'Planet 3': {
-        Name: cities[2].name_,
-        Corn: cities[2].corn_,
-        Gold: cities[2].gold_,
-        Traders: cities[2].nbTrader_,
-        Soldiers: cities[2].army.soldiersNb_
+        Name: planets[2].name_,
+        Credit: planets[2].credit_,
+        Spaceships: planets[2].fleet.spaceshipsNb_,
+          Fuel: planets[2].fuel_,
+          Traders: planets[2].nbTrader_
       },
       'Planet 4': {
-        Name: cities[3].name_,
-        Corn: cities[3].corn_,
-        Gold: cities[3].gold_,
-        Traders: cities[3].nbTrader_,
-        Soldiers: cities[3].army.soldiersNb_
+        Name: planets[3].name_,
+        Credit: planets[3].credit_,
+        Spaceships: planets[3].fleet.spaceshipsNb_,
+          Fuel: planets[3].fuel_,
+          Traders: planets[3].nbTrader_
       },
       'Planet 5': {
-        Name: cities[4].name_,
-        Corn: cities[4].corn_,
-        Gold: cities[4].gold_,
-        Traders: cities[4].nbTrader_,
-        Soldiers: cities[4].army.soldiersNb_
+        Name: planets[4].name_,
+        Credit: planets[4].credit_,
+        Spaceships: planets[4].fleet.spaceshipsNb_,
+          Fuel: planets[4].fuel_,
+          Traders: planets[4].nbTrader_
       }
     };
 
