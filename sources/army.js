@@ -7,11 +7,11 @@ class Army {
     this.timeFactor_ = timeFactor || 2000;
     this.armyEvent_ = new EventEmitter();
   }
-  
+
   init() {
     this.armyEvent_.setMaxListeners(50);
     this.gaiaInterval_ = setInterval(() => {
-      let nb = Math.floor(Math.random() * 100);
+      const nb = Math.floor(Math.random() * 100);
       {
         this.armyEvent_.emit('aging', this.age);
         this.armyEvent_.emit('breakfast', nb);
@@ -26,9 +26,11 @@ class Army {
       }
 
       this.armyEvent_.on('disease', () => {
-          console.log('\n*************** SOLDIERS NEWS ***************\n'),
-        console.log('Black Plague is upon your army, most of Soldiers died..'),
-              console.log('\n*********************************************\n'),
+        console.log('\n*************** SOLDIERS NEWS ***************\n'),
+          console.log(
+            'Black Plague is upon your army, most of Soldiers died..'
+          ),
+          console.log('\n*********************************************\n'),
           (this.soldiersNb_ = Math.floor(this.soldiersNb_ * 0.01));
       });
 
@@ -52,9 +54,9 @@ class Army {
     age = this.age + 1;
 
     if (age > 70) {
-        console.log('\n*************** SOLDIERS NEWS ***************\n');
+      console.log('\n*************** SOLDIERS NEWS ***************\n');
       console.log('Soldiers of this army are too old, they need retirement');
-        console.log('\n*********************************************\n');
+      console.log('\n*********************************************\n');
       this.soldiersNb_ = 0;
     }
   }

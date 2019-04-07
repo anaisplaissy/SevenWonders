@@ -32,7 +32,7 @@ class ArmyManager {
       cities[index1].army.soldiersNb > 0
     ) {
       if (Math.random() >= 0.5) {
-          console.log('\n*************** PLANET ATTACK ***************\n ');
+        console.log('\n*************** PLANET ATTACK ***************\n ');
         console.log(cities[index0].name + ' attack ' + cities[index1].name);
         if (cities[index0].army.soldiersNb > cities[index1].army.soldiersNb) {
           cities[index0].army.setSoldiersNb =
@@ -83,12 +83,12 @@ class ArmyManager {
           );
         } else {
           console.log('Both forces are equal, this end in a bloodshed');
-            console.log('\n*********************************************\n ');
+          console.log('\n*********************************************\n ');
           cities[index0].army.setSoldiersNb = 0;
           cities[index1].army.setSoldiersNb = 0;
         }
       } else {
-          console.log('\n*************** PLANET ATTACK ***************\n ');
+        console.log('\n*************** PLANET ATTACK ***************\n ');
         console.log(cities[index1].name + ' attack ' + cities[index0].name);
         if (cities[index1].army.soldiersNb > cities[index0].army.soldiersNb) {
           cities[index1].army.setSoldiersNb =
@@ -121,7 +121,7 @@ class ArmyManager {
           console.log(
             cities[index1].name + ' won this war against ' + cities[index0].name
           );
-            console.log('\n*********************************************\n ');
+          console.log('\n*********************************************\n ');
         } else if (
           cities[index1].army.soldiersNb < cities[index0].army.soldiersNb
         ) {
@@ -139,10 +139,10 @@ class ArmyManager {
           console.log(
             cities[index0].name + ' won this war against ' + cities[index1].name
           );
-            console.log('\n*********************************************\n ');
+          console.log('\n*********************************************\n ');
         } else {
           console.log('Both forces are equal, this end in a bloodshed');
-            console.log('\n*********************************************\n ');
+          console.log('\n*********************************************\n ');
           cities[index0].army.setSoldiersNb = 0;
           cities[index1].army.setSoldiersNb = 0;
         }

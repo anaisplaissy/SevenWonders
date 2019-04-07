@@ -1,4 +1,3 @@
-
 const {Divinity} = require('./divinity');
 const {Army} = require('./army');
 
@@ -21,11 +20,7 @@ class City {
     this.divinity_.init();
     this.divinity_.worldEvents.on('favor', shit => this.getShit(shit));
     this.divinity_.worldEvents.on('blessing', shit => this.getShit(shit));
-    this.divinity_.worldEvents.on(
-      'retribution',
-      shit => this.getShit(shit)
-    );
-    
+    this.divinity_.worldEvents.on('retribution', shit => this.getShit(shit));
   }
 
   getShit(s) {
@@ -39,7 +34,7 @@ class City {
     this.corn_ = 0;
     this.gold_ = 0;
   }
-  
+
   get name() {
     return this.name_;
   }
@@ -52,15 +47,14 @@ class City {
     return this.corn_;
   }
 
-    set gold(gold) {
-        this.gold_ = gold;
-    }
+  set gold(gold) {
+    this.gold_ = gold;
+  }
 
-    set corn(corn) {
-        this.corn_ = corn;
-    }
+  set corn(corn) {
+    this.corn_ = corn;
+  }
 
-  
   get army() {
     return this.army_;
   }
@@ -68,22 +62,20 @@ class City {
   buySoldiers(nb) {
     const price = nb * 10;
     if (nb !== 0) {
-        console.log('\n*************** SOLDIERS NEWS ***************\n');
+      console.log('\n*************** SOLDIERS NEWS ***************\n');
       if (this.corn !== 0) {
         if (this.gold > price) {
           this.army.increaseSoldiersNb(nb);
           console.log(nb + ' soldiers have been bought in ' + this.name);
           this.gold -= price;
-        }
-        else {
+        } else {
           console.log('Not enough gold to get soldiers in ' + this.name);
-
         }
-      }
-      else {
+      } else {
         console.log('Not enough crop to feed soldiers in ' + this.name);
       }
-        console.log('\n*********************************************\n');
+
+      console.log('\n*********************************************\n');
     }
   }
 
@@ -93,24 +85,24 @@ class City {
       if (this.corn < 0) {
         this.corn = 0;
         this.army.soldiersNb_ = 0;
-          console.log('\n*************** SOLDIERS NEWS ***************\n');
+        console.log('\n*************** SOLDIERS NEWS ***************\n');
         console.log('No food , No army');
-          console.log('\n*********************************************\n');
+        console.log('\n*********************************************\n');
       }
     }
   }
 
   getOlder() {
     if (this.army.age > 70) {
-        console.log('\n*************** SOLDIERS NEWS ***************\n');
-        console.log(
-            'Soldiers of' +
-            this.name +
-            "'s army are too old, they stop being an army"
-        );
-        console.log('\n*********************************************\n');
+      console.log('\n*************** SOLDIERS NEWS ***************\n');
+      console.log(
+        'Soldiers of' +
+          this.name +
+          "'s army are too old, they stop being an army"
+      );
+      console.log('\n*********************************************\n');
     }
-    }
+  }
 
   get nbTrader() {
     return this.nbTrader_;
