@@ -5,13 +5,13 @@
   "repository": "https://github.com/anaisplaissy/SevenWonders.git",
   "author": "Fabien Lionti <fabien.lionti@gmail.com>",
   "license": "MIT",
-    "xo": {
-        "envs": [
-            "mocha"
-        ],
-        "space": 2,
-        "prettier": true
-    },
+  "xo": {
+    "envs": [
+      "mocha"
+    ],
+    "space": 2,
+    "prettier": true
+  },
   "devDependencies": {
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",

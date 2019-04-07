@@ -5,8 +5,7 @@ const {Divinity} = require('../sources/divinity');
 chai.use(chaiAsPromised);
 chai.should();
 
-
-  describe('world-worldEvents_.js', () => {
+describe('world-worldEvents_.js', () => {
   describe('worldEvents', () => {
     let g;
 
@@ -60,7 +59,7 @@ chai.should();
       g.endWorld();
     });
 
-    it('should update divinity\'s corn', async () => {
+    it("should update divinity's corn", async () => {
       g.corn.should.be.equal(0);
 
       await g.offeringCorn(100);
@@ -72,11 +71,15 @@ chai.should();
       await g.offeringCorn(-1);
       g.corn.should.be.equal(0);
 
-      await (g.offeringCorn('aze')).should.be.rejectedWith(Error,
-        /You didn't gave a number of corn to \b[a-zA-Z].*, Earth collapsed/);
+      await g
+        .offeringCorn('aze')
+        .should.be.rejectedWith(
+          Error,
+          /You didn't gave a number of corn to \b[a-zA-Z].*, Earth collapsed/
+        );
     });
 
-    it('should update divinity\'s gold', async () => {
+    it("should update divinity's gold", async () => {
       g.gold.should.be.equal(0);
 
       await g.offeringGold(100);
@@ -88,8 +91,12 @@ chai.should();
       await g.offeringGold(-1);
       g.gold.should.be.equal(0);
 
-      await (g.offeringGold('aze')).should.be.rejectedWith(Error,
-        /You didn't gave a number of gold to \b[a-zA-Z].*, Earth collapsed/);
+      await g
+        .offeringGold('aze')
+        .should.be.rejectedWith(
+          Error,
+          /You didn't gave a number of gold to \b[a-zA-Z].*, Earth collapsed/
+        );
     });
   });
 
@@ -99,10 +106,7 @@ chai.should();
 
       g.corn.should.be.equal(0);
       g.gold.should.be.equal(0);
-      await Promise.all([
-        g.offeringCorn(100),
-        g.offeringGold(1000)
-      ]);
+      await Promise.all([g.offeringCorn(100), g.offeringGold(1000)]);
 
       g.init();
 
@@ -121,10 +125,7 @@ chai.should();
 
       g.corn.should.be.equal(0);
       g.gold.should.be.equal(0);
-      await Promise.all([
-        g.offeringCorn(100),
-        g.offeringGold(1000)
-      ]);
+      await Promise.all([g.offeringCorn(100), g.offeringGold(1000)]);
 
       g.init();
 
